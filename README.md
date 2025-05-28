@@ -1,64 +1,122 @@
-# DocCare - Doctor Appointment Booking System
+# 🩺 DocCare – Doctor Appointment Booking System (Web + App)
+
+**DocCare** is a full-featured **MERN stack** Doctor Appointment Booking System available as both a responsive **web application** and a mobile **React Native app**. It helps patients easily book appointments, allows doctors to manage their schedules, and gives admins full control — all from any device. Now with **PWA** and **mobile app** support, it ensures accessibility even in offline or low-network areas.
+
+---
 
 ## 📌 Overview
-DocCare is a **MERN stack** web application designed to streamline the process of booking doctor appointments. The platform offers an intuitive interface for patients, doctors, and administrators, ensuring a seamless experience. With integrated **Razorpay and Stripe** payment gateways, users can make secure transactions for their appointments. The system includes role-based access, allowing patients to book appointments, doctors to manage their schedules, and admins to oversee the platform’s functionality.
 
-## 🏗️ Project Structure
-The project is divided into three main components:
+DocCare streamlines healthcare appointment management with secure payment integration, role-based access, and an intuitive user experience for **patients**, **doctors**, and **admins**.
 
-- **Frontend** (React.js): Handles the user interface and interactions.
-- **Backend** (Node.js, Express.js, MongoDB): Manages API requests, authentication, and database operations.
-- **Admin Panel** (React Admin): Provides tools for the admin to manage doctors and users efficiently.
+✨ Supports:
 
-## 🚀 Features
-- **User Authentication:** Secure login/signup functionality using JWT authentication.
-- **Doctor Appointment Booking:** Users can book appointments with doctors based on availability.
-- **Doctor Dashboard:** Doctors have access to a dashboard to manage their appointments.
-- **Admin Panel:** Allows administrators to manage doctors and users.
-- **Payment Integration:** Secure payment processing via **Razorpay and Stripe**.
-- **Advanced Search and Filtering:** Users can find doctors based on specialization, availability, and location.
-- **Mobile-Friendly UI:** The interface is fully responsive, ensuring accessibility on all devices.
-- **Secure API:** Built-in security features such as JWT authentication and data encryption.
+* **Web Application (React.js)** with PWA support
+* **Mobile App (React Native)** for Android/iOS
+
+---
 
 ## 🛠️ Tech Stack
-- **Frontend:** React.js, Redux, Tailwind CSS
-- **Backend:** Node.js, Express.js, MongoDB
-- **Authentication:** JWT, bcrypt
-- **Payments:** Razorpay, Stripe
-- **State Management:** Redux Toolkit
-- **Admin Panel:** React Admin
+
+| Layer              | Technologies                                         |
+| ------------------ | ---------------------------------------------------- |
+| **Frontend** (Web) | React.js, Tailwind CSS, Redux Toolkit, Workbox (PWA) |
+| **Frontend** (App) | React Native, React Navigation, Redux Toolkit        |
+| **Backend**        | Node.js, Express.js, MongoDB                         |
+| **Authentication** | JWT, bcrypt                                          |
+| **Payments**       | Razorpay, Stripe                                     |
+| **Admin Panel**    | React Admin                                          |
+| **PWA Tools**      | Workbox, `manifest.json`, service workers            |
+
+---
+
+## 🚀 Features
+
+### 🌐 Common (Web + App)
+
+* 🔐 Secure JWT Authentication
+* 📅 Real-Time Doctor Appointment Booking
+* 👨‍⚕️ Doctor Dashboard for Schedule Management
+* ⚙️ Admin Panel to Manage Doctors & Users
+* 💳 Razorpay & Stripe Payment Integration
+* 🔍 Advanced Search & Filter by specialization/location
+* 🔒 Encrypted API Communication
+
+### 🌍 Web Specific (PWA)
+
+* 📲 Installable PWA (Add to Home Screen)
+* 🔁 Background Sync for failed requests
+* 💾 Intelligent Caching for faster load times
+* 📴 Offline Access to key pages
+
+### 📱 App Specific
+
+* 🎯 Native-like performance and navigation
+* 🔔 Push Notification (planned)
+* 📷 Camera/File support (for uploading reports - future)
+* 🌐 Works on both **Android** and **iOS**
+
+---
+
+## 🏗️ Project Structure
+
+```
+doccare/
+├── backend/           # Node.js + Express API
+├── frontend/          # React.js Web Application (PWA)
+├── admin/             # React Admin Panel
+└── app/               # React Native Mobile Application
+```
+
+---
 
 ## 🔧 Installation Guide
-Follow these steps to set up the project on your local machine.
 
 ### 1️⃣ Clone the Repository
-```sh
-git clone https://github.com/abhishekgurjar-in/doccare.git
+
+```bash
+git clone https://github.com/abhishekboadgurjar/doccare.git
 cd doccare
 ```
 
+---
+
 ### 2️⃣ Install Dependencies
-#### Frontend
-```sh
+
+#### Web Frontend
+
+```bash
 cd frontend
 npm install
 ```
 
+#### Mobile App (React Native)
+
+```bash
+cd app
+npm install
+```
+
 #### Backend
-```sh
+
+```bash
 cd backend
 npm install
 ```
 
 #### Admin Panel
-```sh
+
+```bash
 cd admin
 npm install
 ```
 
+---
+
 ### 3️⃣ Configure Environment Variables
-Create a `.env` file in the `backend` folder and add the following:
-```env
+
+In the **`backend/.env`** file:
+
+```
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
 RAZORPAY_KEY_ID=your_razorpay_key_id
@@ -66,39 +124,79 @@ RAZORPAY_KEY_SECRET=your_razorpay_key_secret
 STRIPE_SECRET_KEY=your_stripe_secret_key
 ```
 
-### 4️⃣ Run the Application
-#### Start Backend
-```sh
+---
+
+### 4️⃣ Run the Project
+
+#### 🧠 Backend Server
+
+```bash
 cd backend
 npm start
 ```
 
-#### Start Frontend
-```sh
+#### 🌐 Web Frontend (PWA)
+
+```bash
 cd frontend
 npm start
 ```
 
-#### Start Admin Panel
-```sh
+#### 📱 React Native App
+
+Use [Expo](https://docs.expo.dev/) or React Native CLI:
+
+```bash
+cd app
+npx expo start
+```
+
+#### 🛠️ Admin Panel
+
+```bash
 cd admin
 npm start
 ```
 
+---
+
 ## 📸 Screenshots
-*(Include UI screenshots showcasing the homepage, doctor listing, booking page, dashboard, and payment page.)*
+
+> Add screenshots for:
+
+* Web homepage
+* Doctor listing
+* Booking page
+* Mobile UI
+* Admin panel
+
+---
 
 ## 🔗 Live Demo
-[Live Demo](https://doc-care-user.vercel.app/)
 
-## 📌 Future Enhancements
-- **Teleconsultation:** Video calling feature for virtual consultations.
-- **Prescription Management:** Allow doctors to provide digital prescriptions.
-- **Automated Reminders:** Email and SMS notifications for upcoming appointments.
-- **Multi-Language Support:** Enhance accessibility with support for multiple languages.
+🌐 [Live Web App](https://doccare-app.vercel.app/)
+📱 [Mobile App (Expo/Play Store/iOS)](https://doccare-website.vercel.app/)
+
+---
+
+## 🌱 Future Enhancements
+
+* 🎥 Teleconsultation (Video Calling)
+* 💊 Prescription Upload & Sharing
+* 🔔 Push Notifications (App + Web)
+* ⏰ Appointment Reminders via SMS/Email
+* 🌐 Multi-language Support
+* 🧾 Reports Upload for Patients
+
+---
 
 ## 📝 License
+
 This project is licensed under the **MIT License**.
 
+---
+
 ## 📬 Contact
-- **GitHub**: [@abhishekboadgurjar](https://github.com/abhishekboadgurjar)
+
+* GitHub: [@abhishekboadgurjar](https://github.com/abhishekboadgurjar)
+
