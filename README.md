@@ -74,7 +74,7 @@ doccare/
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/abhishekboadgurjar/doccare.git
+git clone https://github.com/abhishekgurjarin/doccare.git
 cd doccare
 ```
 
@@ -198,5 +198,5 @@ This project is licensed under the **MIT License**.
 
 ## 📬 Contact
 
-* GitHub: [@abhishekboadgurjar](https://github.com/abhishekboadgurjar)
+* GitHub: [@abhishekboadgurjar](https://github.com/abhishekgurjarin)
 
